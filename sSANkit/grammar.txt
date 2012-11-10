@@ -1,0 +1,57 @@
+=========== Simple Grammar for chess moves in simplified SAN (sSAN) ============
+
+<MoveList>	->	<Move> " " <MoveList> | <EOF>
+ 
+<Move>	->	"."		// NULL MOVE
+
+<Move>	->	<File><Rank>
+<Move>	->	<File><File><Rank>
+<Move>	->	<File>"8"<Piece>
+<Move>	->	<File>"1"<Piece>
+<Move>	->	<File><File>"8"<Piece>
+<Move>	->	<File><File>"1"<Piece>
+
+<Move>	->	<King><File><Rank>
+<Move>	->	<Piece><File><Rank>
+<Move>	->	<Piece><File><File><Rank>
+<Move>	->	<Piece><Rank><File><Rank>
+<Move>	->	<Piece><File><Rank><File><Rank>
+
+<Move>	-> "OO"
+<Move>	-> "OOO"
+
+<King>	->	"K"
+<Piece>	->	"Q" | "R" | "B" | "N"
+<File>	->	"a"	| "b" | "c"	| "d" | "e" | "f" | "g" | "h"
+<Rank>	->	"1" | "2" | "3" | "4" | "5" | "6" | "7" | "8"
+
+<EOF>	-> '\0'
+
+
+================== Tweaked Grammar for using a LL(1) Parser ====================
+
+<MoveList>	->	<Move> " " <MoveList> | <EOF>
+
+<Move>	->	"." | "OO" | "OOO"
+
+<Move>	->	<File><A>
+<A>		-> 	"2" | "3" | "4" | "5" | "6" | "7"
+<A>		->	"8"<Piece>
+<A>		->	"1"<Piece>
+<A>		->	<File><B>
+<B>		->	"2" | "3" | "4" | "5" | "6" | "7"
+<B>		->	"8"<Piece>
+<B>		->	"1"<Piece>
+
+<Move>	->	"K"<File><Rank>
+<Move>	->	<Piece><C>
+<C>		->	<Rank><File><Rank>
+<C>		->	<File><D>
+<D>		->	<File><Rank>
+<D>		->	<Rank>
+<D>		->	<Rank><File><Rank>
+
+<Piece>	->	"Q" | "R" | "B" | "N"
+<File>	->	"a"	| "b" | "c"	| "d" | "e" | "f" | "g" | "h"
+<Rank>	->	"1" | "2" | "3" | "4" | "5" | "6" | "7" | "8"
+<EOF>	->	'\0'

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>lib_sSANkit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>libsSANkit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>sSANkit in C++.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>sSANkit semantic analyzer testing.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>sSANkit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>6304C47415C0D94600A403D1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>632E924315FF667B003701DB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>633191FA1606F90200E5EBEC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>63A80913162C232E00B312EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>63B61C5416080CC4003BAFD8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>63D58419162D25120007F20C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>63D58467162D26D90007F20C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>63D58489162D33A50007F20C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
